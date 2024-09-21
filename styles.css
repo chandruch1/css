@@ -1,0 +1,87 @@
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5; /* Light Gray */
+    margin: 0;
+    padding: 0;
+}
+
+/* Sudoku Board Container */
+#board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 1px;
+    border: 2px solid #B3E5FC; /* Light Blue Border */
+    width: 540px; /* Adjust based on preferred size */
+    height: 540px; /* Adjust based on preferred size */
+    background-color: #FFFFFF; /* White Background for Board */
+    margin: 20px auto;
+}
+
+/* Tile Styles */
+.tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border: 1px solid #E0E0E0; /* Gray Inner Grid Lines */
+    background-color: #FFFFFF; /* White for Empty Tiles */
+    width: 100%;
+    height: 100%;
+}
+
+.tile-start {
+    background-color: #FFF9C4; /* Light Yellow for Pre-filled Tiles */
+    color: #2C6B2F; /* Dark Green for Solution Numbers */
+}
+
+.horizontal-line {
+    border-bottom: 2px solid #039BE5; /* Dark Blue for Outer Horizontal Grid Lines */
+}
+
+.vertical-line {
+    border-right: 2px solid #039BE5; /* Dark Blue for Outer Vertical Grid Lines */
+}
+
+.selected {
+    background-color: #C8E6C9; /* Light Green for Selected Tiles */
+}
+
+/* Number Buttons Styles */
+.numbers {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    background-color: #E3F2FD; /* Soft Blue Background */
+    color: #0277BD; /* Dark Blue for Number Text */
+    margin: 5px;
+    cursor: pointer;
+}
+
+.numbers.selected {
+    background-color: #81D4FA; /* Brighter Blue when Selected */
+    color: #01579B; /* Darker Blue for Selected Number Text */
+}
+
+.numbers:hover {
+    background-color: #B3E5FC; /* Light Blue on Hover */
+    color: #01579B; /* Dark Blue for Number Text on Hover */
+}
+
+/* Error Display */
+#error {
+    color: #FF5252; /* Red for Errors */
+    font-size: 18px;
+    margin: 10px;
+}
+
+/* Layout Container */
+#container {
+    text-align: center;
+    margin-top: 20px;
+}
+
